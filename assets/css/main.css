@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Sora', sans-serif;
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+  }
+
+  .heading {
+    @apply text-heading font-bold;
+  }
+
+  .body1 {
+    @apply text-body1 font-normal;
+  }
+
+  .body2 {
+    @apply text-body2 font-normal;
+  }
+
+  .body3 {
+    @apply text-body3 font-bold;
+  }
+
+  .body4 {
+    @apply text-body4 font-bold;
+  }
+}
+
+wave {
+  overflow: hidden !important;
+}

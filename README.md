@@ -1,4 +1,4 @@
-# BraveLab Audio Player
+# MusicTech Lab Audio Player
 
 ## Used technologies and libraries
 
@@ -8,7 +8,7 @@
 - [WaveSurfer.js](https://wavesurfer-js.org/) - library for drawing spectrum and dealing with audio
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 
-------------
+---
 
 ## Tools
 
@@ -16,7 +16,7 @@
 - [ESLint](https://eslint.org/) - linter
 - [Yarn](https://yarnpkg.com/) - packages manager
 
-------------
+---
 
 ## Project structure
 
@@ -32,7 +32,7 @@
 ├ nuxt.config.js - SSR configuration file  
 ├ tailwind.config.js - Tailwind CSS extension and configuration file
 
-------------
+---
 
 ## Components documentation
 
@@ -56,10 +56,7 @@ All available icons should be added to `/icons/index.ts` file with specific name
 #### MoleculeIconButton.vue - component used for rendering button with icon inside
 
 ```html
-<molecule-icon-button
-  :disabled="isPreviousDisabled"
-  icon="previous"
-  @click="onPreviousButtonClick" />
+<molecule-icon-button :disabled="isPreviousDisabled" icon="previous" @click="onPreviousButtonClick" />
 ```
 
 - Inputs:
@@ -100,10 +97,7 @@ All available icons should be added to `/icons/index.ts` file with specific name
 #### MoleculeRadioButton.vue - component used for displaying custom radio input
 
 ```html
-<molecule-radio-button
-  :checked="isRadioButtonChecked"
-  @click="selectStem"
-/>
+<molecule-radio-button :checked="isRadioButtonChecked" @click="selectStem" />
 ```
 
 - Inputs:
@@ -114,10 +108,7 @@ All available icons should be added to `/icons/index.ts` file with specific name
 #### MoleculeStemsButton.vue - component used for displaying stems button responsible for showing stems box
 
 ```html
-<molecule-stems-button
-  disabled="false"
-  stems-title="Stems"
-  @click="toggleStemsVisibility" />
+<molecule-stems-button disabled="false" stems-title="Stems" @click="toggleStemsVisibility" />
 ```
 
 - Inputs:
@@ -125,13 +116,11 @@ All available icons should be added to `/icons/index.ts` file with specific name
 - - `disabled` - indicates if button should be disabled or not
 - Outputs:
 - - `click` - emitted after clicking on radio button
-  
+
 #### MoleculeTrackInfo.vue - component used for displaying information about current track
 
 ```html
-<molecule-track-info
-  :band-name="bandName"
-  :track-name="trackName" />
+<molecule-track-info :band-name="bandName" :track-name="trackName" />
 ```
 
 - Inputs:
@@ -157,10 +146,7 @@ All available icons should be added to `/icons/index.ts` file with specific name
 #### MoleculeVolumeControl.vue - component used for managing the audio player volume
 
 ```html
-<molecule-volume-control 
-  v-if="waveSurfer"
-  :value="currentVolume"
-  @volume-change="onVolumeChange" />
+<molecule-volume-control v-if="waveSurfer" :value="currentVolume" @volume-change="onVolumeChange" />
 ```
 
 - Inputs:
@@ -219,7 +205,6 @@ All available icons should be added to `/icons/index.ts` file with specific name
 - - `select-stem` - emitted after stem selection. Contains 2 objects: the selected stem and the stem WaveSurfer
 - - `stem-time-update` - emitted continuously if stem is playing. Notify the main WaveSurfer object to update it's progress
 
-
 #### OrganismHookControls.vue - component used for displaying hooks menu and managing them
 
 ```html
@@ -240,7 +225,6 @@ All available icons should be added to `/icons/index.ts` file with specific name
 - - `download` - emitted after clicking `download` button
 - - `play-loop` - emitted after clicking button for turning on/off loop mode
 - - `remove` - emitted after clicking `remove` button
-
 
 #### OrganismAudioPlayer.vue - the main component used for displaying the whole player.
 
@@ -280,19 +264,18 @@ Inside it contains all listed above components. It is responsible for generating
 - - `next` - emitted after clicking on next button
 - - `toggle-shuffle` - emitted after clicking on the button for shuffling playlist
 
-
-------------
+---
 
 ## Local environment setup
 
 - Install NVM (Node version Manager): [for Mac or Ubuntu](https://github.com/nvm-sh/nvm) or [for Windows](https://github.com/coreybutler/nvm-windows)
-- Run command `nvm install 16.10.0` and `nvm use`
+- Run command `nvm install 22.9.0` and `nvm use`
 - Install [Yarn](https://yarnpkg.com/)
 - Install `node_modules` with command `yarn install`
 - Run project with `yarn dev`
 - App with hot reload on `http://localhost:3000`
 
-------------
+---
 
 ## Lints and fixes files
 

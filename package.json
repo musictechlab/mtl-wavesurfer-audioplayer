@@ -1,0 +1,49 @@
+{
+  "name": "mt-audioplayer",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint \"**/*.{js,ts,vue}\" --ignore-pattern '.gitignore' --ignore-pattern '.nuxt'",
+    "lint:prettier": "prettier --check .",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
+  },
+  "dependencies": {
+    "@nuxtjs/composition-api": "latest",
+    "camelcase-keys": "latest",
+    "core-js": "latest",
+    "globals": "^15.14.0",
+    "nuxt": "^3.15.0",
+    "typescript-eslint": "^8.19.0",
+    "vue": "latest",
+    "vue-server-renderer": "latest",
+    "vue-template-compiler": "latest",
+    "wavesurfer.js": "latest",
+    "webpack": "latest"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "latest",
+    "@nuxt/postcss8": "latest",
+    "@nuxt/types": "latest",
+    "@nuxt/typescript-build": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@nuxtjs/eslint-module": "latest",
+    "autoprefixer": "latest",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-nuxt": "latest",
+    "eslint-plugin-vue": "^9.32.0",
+    "postcss": "latest",
+    "prettier": "latest",
+    "tailwindcss": "latest",
+    "typescript": "^5.7.2"
+  }
+}
