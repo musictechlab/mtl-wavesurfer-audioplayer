@@ -282,3 +282,8 @@ Inside it contains all listed above components. It is responsible for generating
 
 ## S3 Policy
 https://eu-central-1.console.aws.amazon.com/s3/buckets/soundlab-poc?region=eu-central-1&bucketType=general&tab=permissions
+
+## API
+Go to the folder `api` and run `poetry install`
+Then run `poetry run uvicorn main:app --reload --host 0.0.0.0 --port 7070`
+Track examples will be available at http://localhost:7070/api/tracks
