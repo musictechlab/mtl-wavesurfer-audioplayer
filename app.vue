@@ -5,7 +5,7 @@
       <div
         v-for="track in tracks"
         :key="track.id"
-        class="flex justify-between items-center p-16 mb-16 border-1 border-black w-full cursor-pointer"
+        class="flex justify-between items-center p-16 mb-16 border-1 border-white w-full cursor-pointer"
         @click="selectTrack(track)"
       >
         <div class="flex items-center">
@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <div class="fixed md:relative bottom-0 left-0 w-full bg-white z-50">
+    <div class="fixed md:relative bottom-0 left-0 w-full bg-black z-50">
       <client-only>
         <organism-audio-player
           v-if="currentTrack && currentTrack.mainFile"
@@ -67,7 +67,7 @@
   import OrganismAudioPlayer from '~/organisms/OrganismAudioPlayer.vue'
   import WaveSurfer from 'wavesurfer.js'
 
-  const RESOURCE_URL = 'https://mt-audioplayer.s3.amazonaws.com/'
+  const RESOURCE_URL = 'https://mtl-wavesurfer-audioplayer.s3.amazonaws.com/'
   const API_URL = 'http://localhost:7070/api/tracks'
   const DEFAULT_THUMBNAIL = 'https://cdn.prod.website-files.com/63337fce7f2d6c29c4554b84/65b3a6b96fa081f504bc180b_Bravelab_2024-01-26-13.18.27%402x.png'
   const DEFAULT_STEM_NAME = 'Other'
@@ -239,8 +239,9 @@
 
       // Log window width on mount
       onMounted(() => {
-        window.WaveSurfer = WaveSurfer
-        
+        if (process.client) {
+          window.WaveSurfer = WaveSurfer
+        }
       });
 
       return {

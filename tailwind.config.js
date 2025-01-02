@@ -12,6 +12,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        black: '#000005',
+      },
       width: {
         30: '30px',
         78: '78px',

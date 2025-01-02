@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border-0 md:border-1 border-black pt-68 md:pt-16 p-8 md:p-16 w-full flex flex-wrap items-center relative justify-between md:justify-unset"
+    class="border-0 md:border-1 border-white pt-68 md:pt-16 p-8 md:p-16 w-full flex flex-wrap items-center relative justify-between md:justify-unset"
   >
     <div class="block md:hidden h-4 w-full bg-black absolute left-0 top-56"></div>
     <div class="flex">
@@ -33,7 +33,7 @@
       @stem-time-update="onStemTimeUpdate"
     />
     <div
-      id="mt-audioplayer-wavesurfer"
+      id="mtl-wavesurfer-audioplayer"
       class="flex-1 absolute top-8 left-8 right-8 md:top-0 md:left-0 md:right-0 md:relative"
     >
       <organism-hook-controls
@@ -212,7 +212,7 @@ export default defineComponent({
 
     const initWaveSurfer = () => {
       waveSurfer.value = window.WaveSurfer.create({
-        container: '#mt-audioplayer-wavesurfer',
+        container: '#mtl-wavesurfer-audioplayer',
         backend: 'MediaElement',
         height: 40,
         width: 600,
@@ -359,9 +359,11 @@ export default defineComponent({
         onSelectStem(null, null)
       }
 
-      stemsContainerLeftPosition.value =
-        window.innerWidth < 768 ? 0 : (document.getElementById('mt-audioplayer-wavesurfer')?.offsetLeft as number) || 0
-      stemsContainerMaxWidth.value = document.getElementById('mt-audioplayer-wavesurfer')?.offsetWidth || 0
+      if (typeof document !== 'undefined') {
+        stemsContainerLeftPosition.value =
+          window.innerWidth < 768 ? 0 : (document.getElementById('mtl-wavesurfer-audioplayer')?.offsetLeft as number) || 0
+        stemsContainerMaxWidth.value = document.getElementById('mtl-wavesurfer-audioplayer')?.offsetWidth || 0
+      }
       areStemsVisible.value = !areStemsVisible.value
     }
 

@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Sora', sans-serif;
+  @apply bg-black;
+  @apply text-white;
+  @apply font-body;
+  @apply font-normal;
+  @apply border-white;
+
+  background-image: url('../bg.svg');
+  
 }
 
 @font-face {
