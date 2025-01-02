@@ -15,9 +15,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent, ref } from 'vue'
 import MoleculeIconButton from '@/molecules/MoleculeIconButton.vue'
-import { useClickOutside } from '@/src/composables/click-outside.composable'
+import { useClickOutside } from '~/src/composables/click-outside.composable'
 
 export default defineComponent({
   name: 'MoleculeMenu',

@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import AtomIcon from '@/atoms/AtomIcon.vue'
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'MoleculeStemsButton',

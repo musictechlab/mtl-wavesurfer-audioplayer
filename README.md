@@ -4,7 +4,6 @@
 
 - [Vue.js](https://vuejs.org/) - main framework
 - [Nuxt.js](https://nuxtjs.org/) - SSR framework for Vue
-- [Nuxt Composition API](https://composition-api.nuxtjs.org/) - library for Composition API support in Nuxt.js
 - [WaveSurfer.js](https://wavesurfer-js.org/) - library for drawing spectrum and dealing with audio
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 
@@ -280,3 +279,6 @@ Inside it contains all listed above components. It is responsible for generating
 ## Lints and fixes files
 
 - Run command `yarn lint`
+
+## S3 Policy
+https://eu-central-1.console.aws.amazon.com/s3/buckets/soundlab-poc?region=eu-central-1&bucketType=general&tab=permissions

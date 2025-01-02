@@ -1,4 +1,4 @@
-import { onBeforeUnmount, onMounted, Ref } from '@nuxtjs/composition-api'
+import { onBeforeUnmount, onMounted, Ref } from 'vue'
 
 export function useClickOutside(elTargetRef: Ref, callback: () => void) {
   if (!elTargetRef) {

@@ -66,7 +66,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, ref, watch, Ref } from '@nuxtjs/composition-api'
+import { computed, defineComponent, onMounted, ref, watch, Ref } from 'vue'
 import MoleculeTrackProgress from '@/molecules/MoleculeTrackProgress.vue'
 import OrganismAudioControls from '@/organisms/OrganismAudioControls.vue'
 import MoleculeTrackInfo from '@/molecules/MoleculeTrackInfo.vue'
@@ -76,6 +76,10 @@ import MoleculeStemsButton from '@/molecules/MoleculeStemsButton.vue'
 import OrganismStemsControls from '@/organisms/OrganismStemsControls.vue'
 import MoleculeIconButton from '@/molecules/MoleculeIconButton.vue'
 import MoleculeMenu from '@/molecules/MoleculeMenu.vue'
+import RegionsPlugin from 'wavesurfer.js/dist/plugins/regions.esm.js'
+
+
+const regions = RegionsPlugin.create()
 
 export interface IWaveSurfer {
   isPlaying(): boolean
@@ -218,7 +222,7 @@ export default defineComponent({
         cursorWidth: 0,
         barHeight: 1,
         normalize: true,
-        plugins: [window.WaveSurfer.regions.create({})],
+        plugins: [regions],
       })
       waveSurfer.value?.on('play', () => (isPlaying.value = true))
       waveSurfer.value?.on('pause', () => (isPlaying.value = stemWaveSurfer.value?.isPlaying() || false))

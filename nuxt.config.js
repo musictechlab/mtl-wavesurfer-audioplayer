@@ -1,4 +1,5 @@
-export default {
+export default defineNuxtConfig({
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'MusicTech Lab | Audio Player Demo',
@@ -8,7 +9,6 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -24,12 +24,20 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    '@nuxtjs/composition-api/module',
     '@nuxt/postcss8',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    '@vite-pwa/nuxt',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts'
+  ],
+  pwa: {
+    workbox: {
+      swURL: '/sw.js',
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -47,4 +55,5 @@ export default {
 
   target: 'static',
   compatibilityDate: '2025-01-01',
-}
+  pages: false
+})

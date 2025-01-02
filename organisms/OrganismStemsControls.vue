@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onUnmounted, ref, Ref } from '@nuxtjs/composition-api'
+import { defineComponent, onMounted, onUnmounted, ref, Ref } from 'vue'
 import AtomIcon from '@/atoms/AtomIcon.vue'
 import MoleculeRadioButton from '@/molecules/MoleculeRadioButton.vue'
 

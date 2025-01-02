@@ -1,0 +1,131 @@
+{
+    "data": {
+      "music_store_music": [
+        {
+          "id": "1",
+          "title": "Orchid",
+          "genre": "Electro",
+          "music_store_musicfiles": [
+            {
+              "file_name": "orchid.mp3",
+              "file_type": "INSTRUMENTAL",
+              "bpm": 0,
+              "vocal_type": "",
+              "file_upload": "https://soundlab-poc.s3.eu-central-1.amazonaws.com/orchid.mp3",
+              "waveform": "",
+              "waveform_image": ""
+            }
+          ],
+          "music_store_author": {
+            "legal_name": "Soundlab",
+            "pseudonym": ""
+          },
+          "thumbnail": "",
+          "main_file": {
+            "file_upload": "https://soundlab-poc.s3.eu-central-1.amazonaws.com/orchid.mp3"
+          },
+          "stems": []
+        },
+        {
+          "id": "2",
+          "title": "Underground stories",
+          "genre": "Electro",
+          "music_store_musicfiles": [
+            {
+              "file_name": "underground+stories.mp3",
+              "file_type": "INSTRUMENTAL",
+              "bpm": 0,
+              "vocal_type": "",
+              "file_upload": "https://soundlab-poc.s3.eu-central-1.amazonaws.com/underground+stories.mp3",
+              "waveform": "",
+              "waveform_image": ""
+            }
+          ],
+          "music_store_author": {
+            "legal_name": "Soundlab",
+            "pseudonym": ""
+          },
+          "thumbnail": "",
+            "main_file": {
+            "file_upload": "https://soundlab-poc.s3.eu-central-1.amazonaws.com/underground+stories.mp3"
+          },
+          "stems": []
+        },
+        {
+          "id": "3",
+          "title": "Anabis",
+          "genre": "Electro",
+          "music_store_musicfiles": [
+            {
+              "file_name": "anabis.mp3",
+              "file_type": "INSTRUMENTAL",
+              "bpm": 0,
+              "vocal_type": "INSTRUMENTAL",
+              "file_upload": "https://soundlab-poc.s3.eu-central-1.amazonaws.com/anabis.mp3",
+              "waveform": "",
+              "waveform_image": ""
+            }
+          ],
+          "music_store_author": {
+            "legal_name": "Soundlab",
+            "pseudonym": ""
+          },
+          "thumbnail": "https://cdn.prod.website-files.com/63337fce7f2d6c29c4554b84/65b3a6b96fa081f504bc180b_Bravelab_2024-01-26-13.18.27%402x.png",
+            "main_file": {
+            "file_upload": "https://soundlab-poc.s3.eu-central-1.amazonaws.com/anabis.mp3"
+          },
+          "stems": []
+        },
+        {
+          "id": "4",
+          "title": "XV3",
+          "genre": "Electro",
+          "music_store_musicfiles": [
+            {
+              "file_name": "xv3.m4a",
+              "file_type": "INSTRUMENTAL",
+              "bpm": 0,
+              "vocal_type": "INSTRUMENTAL",
+              "file_upload": "https://soundlab-poc.s3.eu-central-1.amazonaws.com/xv3.m4a",
+              "waveform": "",
+              "waveform_image": ""
+            }
+          ],
+          "music_store_author": {
+            "legal_name": "Soundlab",
+            "pseudonym": ""
+          },
+          "thumbnail": "",
+          "main_file": {
+            "file_upload": "https://soundlab-poc.s3.eu-central-1.amazonaws.com/xv3.m4a"
+          },
+          "stems": []
+        },
+        {
+          "id": "5",
+          "title": "Taste day",
+          "genre": "Electro",
+          "music_store_musicfiles": [
+            {
+              "file_name": "tasteaday.mp3",
+              "file_type": "INSTRUMENTAL",
+              "bpm": 0,
+              "vocal_type": "",
+              "file_upload": "https://soundlab-poc.s3.eu-central-1.amazonaws.com/tasteaday.mp3",
+              "waveform": "",
+              "waveform_image": ""
+            }
+          ],
+          "music_store_author": {
+            "legal_name": "Soundlab",
+            "pseudonym": ""
+          },
+          "thumbnail": "",
+          "main_file": {
+            "file_upload": "https://soundlab-poc.s3.eu-central-1.amazonaws.com/tasteaday.mp3"
+          },
+          "stems": []
+        }
+      ]
+    }
+  }
