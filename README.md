@@ -1,5 +1,17 @@
 # MusicTech Lab Audio Player
 
+## Table of Contents
+- [Used technologies and libraries](#used-technologies-and-libraries)
+- [Tools](#tools)
+- [Project structure](#project-structure)
+- [Components documentation](#components-documentation)
+- [Local environment setup](#local-environment-setup)
+- [Lints and fixes files](#lints-and-fixes-files)
+- [S3 Policy](#s3-policy)
+- [API](#api)
+- [Contribution Guidelines](#contribution-guidelines)
+- [License](#license)
+
 ## Used technologies and libraries
 
 - [Vue.js](https://vuejs.org/) - main framework
@@ -61,7 +73,7 @@ All available icons should be added to `/icons/index.ts` file with specific name
 - Inputs:
 - - `icon` - the name of icon that should be rendered
 - - `disabled` - indicates if button should be disabled or not
-- - `small` - indicates if button should be displayed ins small mode
+- - `small` - indicates if button should be displayed in small mode
 - Outputs:
 - - `click` - emitted after clicking on button
 
@@ -86,7 +98,7 @@ All available icons should be added to `/icons/index.ts` file with specific name
 - - `is-previous-disabled` - indicates if previous button should be disabled or not
 - - `is-next-disabled` - indicates if next button should be disabled or not
 - - `is-shuffle` - indicates if shuffle button should be active or not
-- - `hook` - indicates if hook button should be displayed ins small mode
+- - `hook` - indicates if hook button should be displayed in small mode
 - Outputs:
 - - `previous` - emitted after clicking on previous button
 - - `next` - emitted after clicking on next button
@@ -202,7 +214,7 @@ All available icons should be added to `/icons/index.ts` file with specific name
 - - `volume` - the current value of volume
 - Outputs:
 - - `select-stem` - emitted after stem selection. Contains 2 objects: the selected stem and the stem WaveSurfer
-- - `stem-time-update` - emitted continuously if stem is playing. Notify the main WaveSurfer object to update it's progress
+- - `stem-time-update` - emitted continuously if stem is playing. Notify the main WaveSurfer object to update its progress
 
 #### OrganismHookControls.vue - component used for displaying hooks menu and managing them
 
@@ -267,23 +279,54 @@ Inside it contains all listed above components. It is responsible for generating
 
 ## Local environment setup
 
-- Install NVM (Node version Manager): [for Mac or Ubuntu](https://github.com/nvm-sh/nvm) or [for Windows](https://github.com/coreybutler/nvm-windows)
-- Run command `nvm install 22.9.0` and `nvm use`
-- Install [Yarn](https://yarnpkg.com/)
-- Install `node_modules` with command `yarn install`
-- Run project with `yarn dev`
-- App with hot reload on `http://localhost:3000`
+1. **Install NVM (Node Version Manager)**: 
+   - For Mac or Ubuntu: [NVM Installation](https://github.com/nvm-sh/nvm)
+   - For Windows: [NVM for Windows](https://github.com/coreybutler/nvm-windows)
+   
+2. **Install Node.js**: 
+   - Run the command `nvm install 22.9.0` and then `nvm use 22.9.0`.
+
+3. **Install Yarn**: 
+   - Follow the instructions on [Yarn Installation](https://yarnpkg.com/).
+
+4. **Install project dependencies**: 
+   - Run `yarn install` to install `node_modules`.
+
+5. **Run the project**: 
+   - Use `yarn dev` to start the application with hot reload on `http://localhost:3000`.
 
 ---
 
 ## Lints and fixes files
 
-- Run command `yarn lint`
+- Run command `yarn lint` to check for linting issues and apply fixes.
 
 ## S3 Policy
-https://eu-central-1.console.aws.amazon.com/s3/buckets/soundlab-poc?region=eu-central-1&bucketType=general&tab=permissions
+[View S3 Policy](https://eu-central-1.console.aws.amazon.com/s3/buckets/soundlab-poc?region=eu-central-1&bucketType=general&tab=permissions)
 
 ## API
-Go to the folder `api` and run `poetry install`
-Then run `poetry run uvicorn main:app --reload --host 0.0.0.0 --port 7070`
-Track examples will be available at http://localhost:7070/api/tracks
+Go to the folder `api` and run:
+```bash
+poetry install
+```
+Then run:
+```bash
+poetry run uvicorn main:app --reload --host 0.0.0.0 --port 7070
+```
+Track examples will be available at [http://localhost:7070/api/tracks](http://localhost:7070/api/tracks).
+
+---
+
+## Contribution Guidelines
+
+We welcome contributions! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch and create a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
